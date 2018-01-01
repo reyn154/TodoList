@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Todo List</h1>
+    <div>
+        <form action = "/add" method = "POST">
+            <input type = "text" name = "todoTask">
+            <input type = "submit" value = "Add new task">
+        </form>
+    </div>
+    <div>
+        <ul>
+            {% for task in tasks %}
+                <li><input type = "checkbox">{{ task.text }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
